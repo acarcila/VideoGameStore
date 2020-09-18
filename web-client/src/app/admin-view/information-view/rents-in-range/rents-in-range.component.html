@@ -1,0 +1,15 @@
+<h3>Buscar alquileres por rango</h3>
+<form>
+    <label>Min</label>
+    <input type="date" placeholder="Min" #inputMin>
+
+    <label>Max</label>
+    <input type="date" placeholder="Max" #inputMax>
+
+    <button (click)="submit($event, inputMin.value, inputMax.value)">Submit</button>
+</form>
+<ul>
+    <div *ngFor="let rental of rentals">
+        ID: {{rental.idRental}} Retornado: {{rental.isReturned}} Precio: {{ rental.price }}
+    </div>
+</ul>

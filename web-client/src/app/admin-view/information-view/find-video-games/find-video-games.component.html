@@ -1,0 +1,20 @@
+<h3>Buscar videojuegos</h3>
+<form>
+    <label>Search</label>
+    <input type="text" placeholder="" #inputSearch>
+
+    <label>Country</label>
+    <select (change)="selectChangeHandler($event)">
+        <option value="director">Director</option>
+        <option value="character">Personaje</option>
+        <option value="producer">Productor</option>
+        <option value="company">Compañia</option>
+    </select>
+
+    <button (click)="submit($event, inputSearch.value)">Submit</button>
+</form>
+<ul>
+    <div *ngFor="let videoGame of videoGames">
+        {{ videoGame.name }} {{ videoGame.year }} {{ videoGame.rentalPrice }}
+    </div>
+</ul>

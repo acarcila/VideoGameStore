@@ -1,0 +1,13 @@
+<p>create-rental-view works!</p>
+<form>
+    <label>ID Cliente</label>
+    <input type="text" placeholder="IdCliente" #inputIdClient>
+
+    <label>ID Videojuego</label>
+    <input type="text" placeholder="ID Videojuego" #inputIdVideoGame>
+
+    <label>Número de días</label>
+    <input type="number" placeholder="No. de días " #inputDays>
+
+    <button (click)="submit($event, inputIdClient.value, inputIdVideoGame.value, inputDays.value)">Submit</button>
+</form>

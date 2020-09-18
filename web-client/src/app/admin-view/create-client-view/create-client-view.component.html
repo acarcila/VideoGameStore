@@ -1,0 +1,22 @@
+<p>create-client-view works!</p>
+<form>
+    <label>Nombre</label>
+    <input type="text" placeholder="Nombre" #inputName>
+
+    <label>Cedula</label>
+    <input type="text" placeholder="Cedula" #inputIdentificationNumber>
+
+    <label>Email</label>
+    <input type="text" placeholder="Email" #inputEmail >
+
+    <label>Celular</label>
+    <input type="text" placeholder="Celular" #inputPhoneNumber >
+
+    <label>Direccion</label>
+    <input type="text" placeholder="Dirección" #inputAddress >
+
+    <label>Fecha de nacimiento</label>
+    <input type="date" #inputBirthday>
+
+    <button (click)="submit($event, inputName.value, inputIdentificationNumber.value, inputEmail.value, inputPhoneNumber.value, inputAddress.value, inputBirthday.value)">Submit</button>
+</form>
