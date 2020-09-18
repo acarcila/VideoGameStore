@@ -12,30 +12,30 @@ public interface IInformationService {
     @GetMapping(path = "/clients/orderByRentals/{limit}")
     Iterable<ClientDTO> findClientsOrderedByRentals(@PathVariable Integer limit);
 
-    @GetMapping(path = "/video_games/orderByRentals/{limit}")
+    @GetMapping(path = "/video_games/order_by_rentals/{limit}")
     Iterable<VideoGameDTO> findVideoGamesOrderedByRentals(@PathVariable Integer limit);
 
-    @GetMapping(path = "/Rentals/Time/{startTimestamp}/{endTimestamp}")
+    @GetMapping(path = "/rentals/time/{startTimestamp}/{endTimestamp}")
     Iterable<RentalDTO> findRentalsByTime(@PathVariable Integer startTimestamp, @PathVariable Integer endTimestamp);
 
-    @GetMapping(path = "/video_games/byCharacter/{characterName}")
+    @GetMapping(path = "/video_games/by_character/{characterName}")
     Iterable<VideoGameDTO> findVideoGamesByCharacter(@PathVariable String characterName);
 
-    @GetMapping(path = "/video_games/byDirector/{directorName}")
+    @GetMapping(path = "/video_games/by_director/{directorName}")
     Iterable<VideoGameDTO> findVideoGamesByDirector(@PathVariable String directorName);
 
-    @GetMapping(path = "/video_games/byProducer/{producerName}")
+    @GetMapping(path = "/video_games/by_producer/{producerName}")
     Iterable<VideoGameDTO> findVideoGamesByProducer(@PathVariable String producerName);
 
-    @GetMapping(path = "/video_games/byCompany/{CompanyName}")
+    @GetMapping(path = "/video_games/by_company/{CompanyName}")
     Iterable<VideoGameDTO> findVideoGamesByCompany(@PathVariable String companyName);
 
-    @GetMapping(path = "/video_games/leastRented/byAges")
+    @GetMapping(path = "/video_games/least_rented/by_ages")
     Iterable<VideoGameDTO> findVideoGamesByLeastRented();
 
-    @GetMapping(path = "/rentals/byClient/{identificationNumber}")
+    @GetMapping(path = "/rentals/by_client/{identificationNumber}")
     Iterable<RentalDTO> findRentalsByClient(@PathVariable String identificationNumber);
 
-    @GetMapping(path = "/video_games/byClient/{identificationNumber}")
+    @GetMapping(path = "/video_games/by_client/{identificationNumber}")
     Iterable<VideoGameDTO> findVideoGamesByClient(@PathVariable String identificationNumber);
 }
