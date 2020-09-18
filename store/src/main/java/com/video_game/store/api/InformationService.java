@@ -66,4 +66,9 @@ public class InformationService implements IInformationService {
     public Iterable<VideoGameDTO> findVideoGamesByClient(String identificationNumber) {
         return controller.findVideoGamesByClient(identificationNumber);
     }
+
+    @Override
+    public VideoGameDTO findVideoGame(Integer idVideoGame) {
+        return controller.findVideoGame(idVideoGame);
+    }
 }

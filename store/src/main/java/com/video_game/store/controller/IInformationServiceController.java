@@ -26,4 +26,6 @@ public interface IInformationServiceController {
     Iterable<RentalDTO> findRentalsByClient(String identificationNumber);
 
     Iterable<VideoGameDTO> findVideoGamesByClient(String identificationNumber);
+
+    VideoGameDTO findVideoGame(Integer idVideoGame);
 }

@@ -44,6 +44,7 @@ public class RentServiceController implements IRentServiceController {
         Client client = clientRepository.findById(rentalDTO.getFkClient()).orElse(null);
         VideoGame videoGame = videoGameRepository.findById(rentalDTO.getFkVideoGame()).orElse(null);
         Rental rental = FactoryModel.convert(rentalDTO, client, videoGame);
+        System.out.println(rental.getIdRental() + ", " + rental.getDuration() + ", " + rental.getClient().getName() + ", " + rental.getPrice());
         return FactoryModel.convert(rentalRepository.save(rental));
     }
 

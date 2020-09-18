@@ -53,10 +53,10 @@ public class FactoryModel {
 
     public static Rental convert(RentalDTO rentalDTO, Client client, VideoGame videoGame) {
         Rental rental = new Rental();
-        rental.setIdRental(rental.getIdRental());
+        rental.setIdRental(rentalDTO.getIdRental());
         rental.setTimestamp(rentalDTO.getTimestamp());
         rental.setDuration(rentalDTO.getDuration());
-        rental.setPrice(rental.getPrice());
+        rental.setPrice(rentalDTO.getPrice());
         rental.setIsReturned(rentalDTO.getIsReturned());
         rental.setClient(client);
         rental.setVideoGame(videoGame);

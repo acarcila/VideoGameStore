@@ -27,7 +27,7 @@ public interface IInformationService {
     @GetMapping(path = "/video_games/by_producer/{producerName}")
     Iterable<VideoGameDTO> findVideoGamesByProducer(@PathVariable String producerName);
 
-    @GetMapping(path = "/video_games/by_company/{CompanyName}")
+    @GetMapping(path = "/video_games/by_company/{companyName}")
     Iterable<VideoGameDTO> findVideoGamesByCompany(@PathVariable String companyName);
 
     @GetMapping(path = "/video_games/least_rented/by_ages")
@@ -38,4 +38,7 @@ public interface IInformationService {
 
     @GetMapping(path = "/video_games/by_client/{identificationNumber}")
     Iterable<VideoGameDTO> findVideoGamesByClient(@PathVariable String identificationNumber);
+
+    @GetMapping(path = "/video_game/{idVideoGame}")
+    VideoGameDTO findVideoGame(@PathVariable Integer idVideoGame);
 }

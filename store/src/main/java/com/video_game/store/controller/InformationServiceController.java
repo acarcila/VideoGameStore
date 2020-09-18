@@ -139,4 +139,9 @@ public class InformationServiceController implements IInformationServiceControll
         }
         return videoGameDTOList;
     }
+
+    @Override
+    public VideoGameDTO findVideoGame(Integer idVideoGame) {
+        return FactoryModel.convert(videoGameRepository.findById(idVideoGame).orElse(null));
+    }
 }
