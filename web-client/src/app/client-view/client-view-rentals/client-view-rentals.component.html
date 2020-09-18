@@ -1,0 +1,11 @@
+<p>client-view-rentals works!</p>
+<form>
+    <input type="text" placeholder="Search.." #inputSearch (keyup)="onInputChange(inputSearch.value)"
+        value={{clientIdentificationNumber}}>
+    <button type='button' (click)="handleSubmit($event)" (keyup.enter)="handleSubmit($event)">search</button>
+</form>
+<ul>
+    <div *ngFor="let rental of rentals">
+        {{ rental.timestamp }} {{ rental.duration }} {{ rental.price }} {{ rental.isReturned }}
+    </div>
+</ul>

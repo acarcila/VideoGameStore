@@ -1,0 +1,11 @@
+<p>client-view-video-games works!</p>
+<form>
+    <input type="text" placeholder="Search.." #inputSearch (keyup)="onInputChange(inputSearch.value)"
+        value={{clientIdentificationNumber}}>
+    <button type='button' (click)="handleSubmit($event)" (keyup.enter)="handleSubmit($event)">search</button>
+</form>
+<ul>
+    <div *ngFor="let videoGame of videoGames">
+        {{ videoGame.name }} {{ videoGame.year }} {{ videoGame.rentalPrice }}
+    </div>
+</ul>
