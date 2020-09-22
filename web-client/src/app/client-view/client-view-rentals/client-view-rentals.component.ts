@@ -1,3 +1,5 @@
+import { element } from 'protractor';
+import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 import { Component, OnInit } from '@angular/core';
 import { InformationAPIService } from '../../information-api.service'
 
@@ -20,6 +22,10 @@ export class ClientViewRentalsComponent implements OnInit {
         this.rentals = data;
         console.log(data);
         this.clientIdentificationNumber = "";
+        this.rentals = this.rentals.map((element) => {
+          element.date = new Date(element['timestamp'] * 1000)
+          return element;
+        });
       }, error => {
         console.log(error);
       })
